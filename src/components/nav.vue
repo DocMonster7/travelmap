@@ -13,8 +13,6 @@
 
 <script>
 import { Slide } from 'vue-burger-menu'  // import the CSS transitions you wish to use, in this case we are using `Slide`
-// import VModal from 'vue-js-modal'
-// import Vue from 'vue';
 
 import firebase from '../firebaseconfig'
 
