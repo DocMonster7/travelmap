@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    commit from github
     <vl-map
       :load-tiles-while-animating="true"
       :load-tiles-while-interacting="true"
