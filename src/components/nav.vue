@@ -5,14 +5,15 @@
       <router-link to="/">Home</router-link>
         <router-link to="">About us</router-link>
         <router-link v-if="!state" to="/login">Login</router-link>
-        <!-- <router-link to="" v-on:click="logout">logout</router-link> -->
+        <router-link v-if="live" v-on:click="livefeed">Live Feed</router-link>
     <button v-if="state" v-on:click="logout">logout</button>
     </Slide>
     </div>
 </template>
 
 <script>
-import { Slide } from 'vue-burger-menu'  // import the CSS transitions you wish to use, in this case we are using `Slide`
+import { Slide } from 'vue-burger-menu'  
+// import the CSS transitions you wish to use, in this case we are using `Slide`
 
 import firebase from '../firebaseconfig'
 
@@ -48,8 +49,11 @@ export default {
 {
 });
       },
-       close(){
+      close(){
         this.$modal.hide("hello-world");
+      },
+      livefeed(){
+        window.open("www.google.com","_blank")
       }
       }
     }
