@@ -36,9 +36,24 @@ export default {
    this.state=false
    // No user is signed in.
   }
+<<<<<<< Updated upstream
 });
     }
 ,
+=======
+})
+  
+}
+,updated(){
+  if(this.state){
+    // console.log(this.uid)
+    firebase.database().ref("/clients/"+this.uid).on("value",snap=>{
+      this.jitsi_server=snap.val().jitsi_server
+  
+    })   
+  }
+},
+>>>>>>> Stashed changes
     methods: {
       logout(){
         // this.$modal.show("hello-world");
