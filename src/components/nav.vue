@@ -4,7 +4,12 @@
         
       <router-link to="/">Home</router-link>
         <router-link to="">About us</router-link>
+<<<<<<< Updated upstream
         <router-link v-if="!state" to="/login">Login</router-link>
+=======
+        <router-link v-if="!state" to="/login">Login</router-link>  
+        <!-- <router-link v-if="live" v-on:click="livefeed">Live Feed</router-link> -->
+>>>>>>> Stashed changes
         <!-- <router-link to="" v-on:click="logout">logout</router-link> -->
     <button v-if="state" v-on:click="logout">logout</button>
     
