@@ -5,8 +5,10 @@
       <router-link to="/">Home</router-link>
         <router-link to="">About us</router-link>
         <router-link v-if="!state" to="/login">Login</router-link>
+        <!-- <router-link v-if="live" v-on:click="livefeed">Live Feed</router-link> -->
         <!-- <router-link to="" v-on:click="logout">logout</router-link> -->
     <button v-if="state" v-on:click="logout">logout</button>
+    <button v-on:click="livefeed">live feed</button>
     </Slide>
     </div>
 </template>
@@ -19,7 +21,8 @@ import firebase from '../firebaseconfig'
 export default {
   data(){
     return{
-    state:false
+    state:false,
+    live:true
   }
   },
   components: {
@@ -50,6 +53,9 @@ export default {
       },
        close(){
         this.$modal.hide("hello-world");
+      },
+      livefeed(){
+        window.open("https://www.google.com", "_blank");
       }
       }
     }
