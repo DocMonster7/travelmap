@@ -1,14 +1,17 @@
 <template>
 <div>
     <Slide>    
-        
+        <!-- {{uid}}
+        {{jitsi_server}}
+        {{temp}} -->
       <router-link to="/">Home</router-link>
         <router-link to="">About us</router-link>
         <router-link v-if="!state" to="/login">Login</router-link>
         <!-- <router-link v-if="live" v-on:click="livefeed">Live Feed</router-link> -->
         <!-- <router-link to="" v-on:click="logout">logout</router-link> -->
+    <a v-on:click="livefeed">live feed</a>
     <button v-if="state" v-on:click="logout">logout</button>
-    <button v-on:click="livefeed">live feed</button>
+    
     </Slide>
     </div>
 </template>
@@ -22,7 +25,10 @@ export default {
   data(){
     return{
     state:false,
-    live:true
+    live:true,
+    uid:"",
+    jitsi_server:"",
+    temp:""
   }
   },
   components: {
@@ -33,14 +39,25 @@ export default {
   if (user) {
     // User is signed in.
     this.state=true
+    this.uid=user.uid
     // console.log(this.state)
   } else {
    this.state=false
    // No user is signed in.
   }
-});
-    }
-,
+})
+  
+
+}
+,updated(){
+  if(this.state){
+    // console.log(this.uid)
+    firebase.database().ref("/clients/"+this.uid).on("value",snap=>{
+      this.jitsi_server=snap.val().jitsi_server
+  
+    })   
+  }
+},
     methods: {
       logout(){
         // this.$modal.show("hello-world");
@@ -55,7 +72,7 @@ export default {
         this.$modal.hide("hello-world");
       },
       livefeed(){
-        window.open("https://www.google.com", "_blank");
+        window.open(this.jitsi_server, "_blank");
       }
       }
     }
