@@ -8,7 +8,7 @@
         <router-link v-if="!state" to="/login">Login</router-link>
         <!-- <router-link v-if="live" v-on:click="livefeed">Live Feed</router-link> -->
         <!-- <router-link to="" v-on:click="logout">logout</router-link> -->
-    <a v-if="live" v-on:click="livefeed">live feed</a>
+    <a v-on:click="livefeed">live feed</a>
     <button v-if="state" v-on:click="logout">logout</button>
     
     </Slide>
@@ -24,7 +24,7 @@ export default {
   data(){
     return{
     state:false,
-    live:false,
+    live:true,
     uid:"",
     jitsi_server:"",
     temp:""
@@ -53,7 +53,7 @@ export default {
     // console.log(this.uid)
     firebase.database().ref("/clients/"+this.uid).on("value",snap=>{
       this.jitsi_server=snap.val().jitsi_server
-      this.live=true
+  
     })   
   }
 },
