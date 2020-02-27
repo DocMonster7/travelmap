@@ -4,7 +4,7 @@
         <thead>
           <tr>
               <th>Name</th>
-              <td>{{fire.Customer2.Name}}</td>
+              <td>{{fire.ZH9lzDYt3iOKwXrFg5PsEd7bH043.buses}}</td>
           </tr>
         </thead>
         <tbody>
@@ -29,7 +29,7 @@
 import firebase from '../firebaseconfig.js'
 
 var ex;
-firebase.database().ref('/Customers').on('value',snap=>{ex=snap.val()})
+firebase.database().ref('/clients').on('value',snap=>{ex=snap.val()})
 export default {
 data() {
     return {
