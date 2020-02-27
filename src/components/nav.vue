@@ -8,7 +8,7 @@
         <router-link v-if="!state" to="/login">Login</router-link>
         <!-- <router-link v-if="live" v-on:click="livefeed">Live Feed</router-link> -->
         <!-- <router-link to="" v-on:click="logout">logout</router-link> -->
-    <a v-on:click="livefeed">live feed</a>
+    <a v-if="live" v-on:click="livefeed">live feed</a>
     <button v-if="state" v-on:click="logout">logout</button>
     
     </Slide>
@@ -24,7 +24,7 @@ export default {
   data(){
     return{
     state:false,
-    live:true,
+    live:false,
     uid:"",
     jitsi_server:"",
     temp:""
@@ -38,6 +38,7 @@ export default {
   if (user) {
     // User is signed in.
     this.state=true
+    this.live=true
     this.uid=user.uid
     // console.log(this.state)
   } else {
