@@ -4,7 +4,6 @@
         <!-- {{uid}}
         {{jitsi_server}}
         {{temp}} -->
-      <router-link to="/">Home</router-link>
         <router-link to="">About us</router-link>
         <router-link v-if="!state" to="/login">Login</router-link>
         <!-- <router-link v-if="live" v-on:click="livefeed">Live Feed</router-link> -->
