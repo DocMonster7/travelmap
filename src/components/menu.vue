@@ -3,22 +3,30 @@
         <table>
         <thead>
           <tr>
-              <th>Name</th>
-              <td>{{fire.ZH9lzDYt3iOKwXrFg5PsEd7bH043.buses}}</td>
+              <th>Bus Name</th>
+              <td>{{fire.ZH9lzDYt3iOKwXrFg5PsEd7bH043.buses.KA19MJ7646.bus_name}}</td>
           </tr>
         </thead>
         <tbody>
           <tr>
-             <th>Number of vehicle</th>
-            <td>{{fire.Customer1.Vehicles}}</td> 
-          </tr>
-           <tr>
-              <th>Vehicle Register Number</th>
-              <td>{{fire.Customer1.Vehicle_Number}}</td>   
+              <th>Bus Number</th>
+              <td>{{fire.ZH9lzDYt3iOKwXrFg5PsEd7bH043.buses.KA19MJ7646.bus_number}}</td>
           </tr>
           <tr>
-              <th>Driver</th>
-              <td>{{fire.Customer1.Driver}}</td>   
+              <th>Driver Name</th>
+              <td>{{fire.ZH9lzDYt3iOKwXrFg5PsEd7bH043.buses.KA19MJ7646.driver_details.name}}</td>
+          </tr>
+          <tr>
+              <th>Driver Number</th>
+              <td>{{fire.ZH9lzDYt3iOKwXrFg5PsEd7bH043.buses.KA19MJ7646.driver_details.number}}</td>
+          </tr>
+          <tr>
+              <th>Conductor Name</th>
+              <td>{{fire.ZH9lzDYt3iOKwXrFg5PsEd7bH043.buses.KA19MJ7646.conductor_details.name}}</td>
+          </tr>
+          <tr>
+              <th>Conductor Number</th>
+              <td>{{fire.ZH9lzDYt3iOKwXrFg5PsEd7bH043.buses.KA19MJ7646.conductor_details.number}}</td>
           </tr>
         </tbody>
       </table>         
