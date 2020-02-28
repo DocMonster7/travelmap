@@ -38,6 +38,7 @@ export default {
   if (user) {
     // User is signed in.
     this.state=true
+    this.live=true
     this.uid=user.uid
     // console.log(this.state)
   } else {
@@ -53,7 +54,7 @@ export default {
     // console.log(this.uid)
     firebase.database().ref("/clients/"+this.uid).on("value",snap=>{
       this.jitsi_server=snap.val().jitsi_server
-      this.live=true
+  
     })   
   }
 },
