@@ -169,10 +169,10 @@ computed: {
   methods: {
     check_route(){
       if(this.selected.id==""||this.selected1.id==""){
-        this.temp="please select Source and Destination"
+        this.temp="Please select Source and Destination"
       }
       if(this.selected.id==this.selected1.id){
-        this.temp="Source and Destination arent proper Please select Correctly"
+        this.temp="Source and Destination aren't proper... Please select Correctly"
       }
       else{
         this.msg=Object.keys(this.all_buses).length
