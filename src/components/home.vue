@@ -137,7 +137,7 @@ export default {
   components: {
     VueAutosuggest
   },created(){
-    
+  
     firebase.database().ref("/routes/all_stops").on("value",snap=>{
       this.all_stops.push(snap.val())
       this.put_data()
@@ -168,14 +168,16 @@ computed: {
   },
   methods: {
     check_route(){
-      if(this.selected.id==""||this.selected1.id==""){
+      //checks source & destination selected or not
+      if(this.selected.id=="" && this.selected1.id==""){
         this.temp="Please select Source and Destination"
       }
+       //checks if source & destinations are same or different
       if(this.selected.id==this.selected1.id){
         this.temp="Source and Destination aren't proper... Please select Correctly"
       }
       else{
-        this.msg=Object.keys(this.all_buses).length
+        // this.msg=Object.keys(this.all_buses).length
         
         for(let i=0;i<Object.keys(this.all_buses).length;i++){
           firebase.database().ref("/routes/bus_route/"+this.all_buses[0][i]+"/timings_stops").once("value",snap=>{
@@ -189,7 +191,7 @@ computed: {
 
          firebase.database().ref("/routes/bus_route/"+this.all_buses[0][i]).once("value",snap=>{
           //  console.log(snap.val().stops)
-          
+          //used to get all stops & all buses
            let a =this.getstop(snap.val().stops,this.all_buses[0][i],1)
            if(a==1){
            console.log("can go")
@@ -216,7 +218,7 @@ computed: {
       // console.log(Object.keys(data).length)
       let i=0,j=0
       for( i=0;i<Object.keys(data).length;i++){
-        
+        //checks if the source is present in array 
         if(data[i]===this.selected.name){
             // console.log(data[i])
             break;
@@ -224,6 +226,7 @@ computed: {
 
       }
       for( j=0;j<Object.keys(data).length;j++){
+          //checks if the destination is present in array  
         if(data[j]===this.selected1.name){
             // console.log(data[j])
             break;
@@ -236,18 +239,16 @@ computed: {
         if(sel==1)
         firebase.database().ref("/routes/bus_route/"+bus+"/timings_stops").once("value",snap=>{
           for(let k=0;k<this.l1;k++){
-          console.log(snap.val()[k][i])
-          console.log(snap.val()[k][j])
+
           this.arrive.push(snap.val()[k][i])
           this.dest.push(snap.val()[k][j])
           }
         })
         if(sel==2){
-        console.log("inside sel=2")
+       
         firebase.database().ref("/routes/bus_route/"+bus+"/timings_stops_1").once("value",snap=>{
           for(let k=0;k<this.l2;k++){
-          console.log(snap.val()[k][i])
-          console.log(snap.val()[k][j])
+          
           this.arrive.push(snap.val()[k][i])
           this.dest.push(snap.val()[k][j])
           }
@@ -258,12 +259,11 @@ computed: {
       return 0
 
     },
-    put_data(){
-      
+    //push the data(all_stops) to the suggestions,suggestion1 
+    put_data(){  
        let i=0;
       
       for(let j=0;j<9;j++){
-        
       
         this.suggestions[0].data.push({
           id:++i,name:this.all_stops[0][j]
@@ -271,8 +271,7 @@ computed: {
       }
        i=0;
       
-      for(let j=0;j<9;j++){
-        
+      for(let j=0;j<9;j++){       
       
         this.suggestions1[0].data.push({
           id:++i,name:this.all_stops[0][j]
@@ -282,7 +281,6 @@ computed: {
       this.all_buses.push(snap.val())
       
     })
-
     },
     clickHandler() {
       // console.log(item)
