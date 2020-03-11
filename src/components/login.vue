@@ -3,7 +3,6 @@
    <center>Please refresh the page if the login is not displaying
   <div id="firebaseui-auth-container"></div></center>
 </div>
-    
 </template>
 
 <script>
