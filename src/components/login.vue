@@ -45,6 +45,6 @@ export default {
   color:whitesmoke;
 }
 .firebaseui-link{
-  color: wheat;
+  color: red;
 }
 </style>
