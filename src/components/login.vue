@@ -3,6 +3,7 @@
    <center>Please refresh the page if the login is not displaying
   <div id="firebaseui-auth-container"></div></center>
 </div>
+
 </template>
 
 <script>
@@ -36,3 +37,14 @@ export default {
     
 }
 </script>
+<style>
+#app{
+  color:white;
+}
+.firebaseui-tos{
+  color:whitesmoke;
+}
+.firebaseui-link{
+  color: wheat;
+}
+</style>

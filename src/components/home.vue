@@ -375,4 +375,6 @@ li:hover {
  ::placeholder{
      color:rgb(48, 47, 47);
  }
+
+ 
 </style>

@@ -1,11 +1,10 @@
 <template>
-<div>
+<div class="navbar">
     <Slide>    
         <router-link to="/menu">Profile</router-link>
         <router-link to="">About us</router-link>
-        <router-link v-if="!state" to="/login">Login</router-link>
-        
     <a v-if="live" v-on:click="livefeed">Live Feed</a>
+            <router-link v-if="!state" to="/login">Login</router-link>
     <button v-if="state" v-on:click="logout">Logout</button>
     
     </Slide>
@@ -81,8 +80,29 @@ export default {
       left: 0;
       right: 0;
     }
-     .bm-overlay {
-      background: rgba(255,255,255);
+    .bm-burger-bars {
+      background-color: #ffffff;
     }
-    
+     .bm-overlay {
+      background: #258dc8; /* Old browsers */
+background: -moz-linear-gradient(top,  #258dc8 23%, #258dc8 34%, #ffffff 67%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #258dc8 23%,#258dc8 34%,#ffffff 67%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #258dc8 23%,#258dc8 34%,#ffffff 67%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+     }
+    nav a{
+      color:black !important;
+     
+    }
+    nav{
+      background-color: transparent!important;
+      box-shadow: none !important;
+    }
+     .bm-menu{
+       background-color: white;
+     }
+     .bm-item-list>*{
+       padding: 0em;
+     }
 </style>
