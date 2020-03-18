@@ -25,7 +25,6 @@ export default {
   }
 }
 </script>
-
 <style>
 body{
   /* background: linear-gradient(180deg, #929dddfc 50%, transparent); */

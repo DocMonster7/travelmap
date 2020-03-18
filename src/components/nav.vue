@@ -1,11 +1,15 @@
 <template>
-<div class="navbar">
+<div>
     <Slide>    
-        <router-link to="/menu">Profile</router-link>
+        <!-- {{uid}}
+        {{jitsi_server}}
+        {{temp}} -->
         <router-link to="">About us</router-link>
-    <a v-if="live" v-on:click="livefeed">Live Feed</a>
-            <router-link v-if="!state" to="/login">Login</router-link>
-    <button v-if="state" v-on:click="logout">Logout</button>
+        <router-link v-if="!state" to="/login">Login</router-link>
+        <!-- <router-link v-if="live" v-on:click="livefeed">Live Feed</router-link> -->
+        <!-- <router-link to="" v-on:click="logout">logout</router-link> -->
+    <a v-if="live" v-on:click="livefeed">live feed</a>
+    <button v-if="state" v-on:click="logout">logout</button>
     
     </Slide>
     </div>
