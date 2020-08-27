@@ -1,22 +1,19 @@
 <template>
 <div>
     <Slide>    
-        <!-- {{uid}}
-        {{jitsi_server}}
-        {{temp}} -->
+    
         <router-link to="">About us</router-link>
         <router-link v-if="!state" to="/login">Login</router-link>
-        <!-- <router-link v-if="live" v-on:click="livefeed">Live Feed</router-link> -->
-        <!-- <router-link to="" v-on:click="logout">logout</router-link> -->
-    <a v-if="live" v-on:click="livefeed">live feed</a>
-    <button v-if="state" v-on:click="logout">logout</button>
+        <a v-if="live" v-on:click="livefeed">live feed</a>
+        <button v-if="state" v-on:click="logout">logout</button>
     
     </Slide>
     </div>
 </template>
 
 <script>
-import { Slide } from 'vue-burger-menu'  // import the CSS transitions you wish to use, in this case we are using `Slide`
+import { Slide } from 'vue-burger-menu'  
+// import the CSS transitions you wish to use, in this case we are using `Slide`
 
 import firebase from '../firebaseconfig'
 
@@ -89,10 +86,10 @@ export default {
     }
      .bm-overlay {
       background: #258dc8; /* Old browsers */
-background: -moz-linear-gradient(top,  #258dc8 23%, #258dc8 34%, #ffffff 67%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #258dc8 23%,#258dc8 34%,#ffffff 67%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #258dc8 23%,#258dc8 34%,#ffffff 67%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+      background: -moz-linear-gradient(top,  #258dc8 23%, #258dc8 34%, #ffffff 67%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top,  #258dc8 23%,#258dc8 34%,#ffffff 67%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom,  #258dc8 23%,#258dc8 34%,#ffffff 67%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 
      }
     nav a{
