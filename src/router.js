@@ -1,9 +1,9 @@
 import vue from 'vue'
 import router from 'vue-router'
 import Home from './components/home.vue'
-import Menu from './components/menu.vue'
+import Profile from './components/menu.vue'
 import Search from './components/search.vue'
-import login from './components/login.vue'
+import Login from './components/login.vue'
 import Aboutus from './components/aboutus.vue'
 vue.use(router)
 let route =
@@ -15,11 +15,11 @@ let route =
             },
             {
                 path: '/login',
-                component: login
+                component: Login
             },
             {
                 path: '/menu',
-                component: Menu
+                component: Profile
             },
             {
                 path: '/search',

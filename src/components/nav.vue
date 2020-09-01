@@ -3,9 +3,10 @@
     <Slide>    
     
         <router-link to="/aboutus">About us</router-link>
+        <router-link v-if="state" to="/menu">Profile</router-link>
         <router-link v-if="!state" to="/login">Login</router-link>
-        <a v-if="live" v-on:click="livefeed">live feed</a>
-        <button v-if="state" v-on:click="logout">logout</button>
+        <a v-if="live" v-on:click="livefeed">Live feed</a>
+        <button v-if="state" v-on:click="logout">Logout</button>
     
     </Slide>
     </div>
