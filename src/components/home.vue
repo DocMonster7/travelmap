@@ -353,7 +353,7 @@ input {
 
 ul {
   width: 100%;
-  color: rgba(30, 39, 46, 1);
+  color: rgb(246, 247, 248);
   list-style: none;
   margin: 0;
   padding: 0.5rem 0 0.5rem 0;
@@ -381,7 +381,7 @@ li:hover {
   color: black;
 }
 .autosuggest__results-item--highlighted {
-  background-color: rgba(65, 212, 178, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 25px;
 }
 #autosuggest__input {
@@ -392,6 +392,6 @@ li:hover {
   border-radius: 25px;
 }
 ::placeholder {
-  color: rgb(48, 47, 47);
+  color: rgb(0, 0, 0);
 }
 </style>

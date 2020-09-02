@@ -25,11 +25,11 @@ export default {
 <style>
 body{
   /* background: linear-gradient(180deg, #929dddfc 50%, transparent); */
-background: #0237d8; /* Old browsers */
-background: -moz-linear-gradient(top,  #0237d8 0%, #eaedef 63%, #fbf9fc 76%, #eaedef 84%, #eaedef 84%, #eaedef 87%, #8dafbf 93%, #0237d8 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #0237d8 0%,#eaedef 63%,#fbf9fc 76%,#eaedef 84%,#eaedef 84%,#eaedef 87%,#8dafbf 93%,#0237d8 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #0237d8 0%,#eaedef 63%,#fbf9fc 76%,#eaedef 84%,#eaedef 84%,#eaedef 87%,#8dafbf 93%,#0237d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0237d8', endColorstr='#0237d8',GradientType=0 ); /* IE6-9 */
+background: rgb(7,15,255); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(7,15,255,1) 0%, rgba(40,47,255,1) 8%, rgba(81,87,255,1) 17%, rgba(117,124,255,1) 27%, rgba(168,174,255,1) 39%, rgba(201,205,255,1) 47%, rgba(168,174,255,1) 56%, rgba(117,124,255,1) 68%, rgba(81,87,255,1) 79%, rgba(40,47,255,1) 90%, rgba(7,15,255,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(7,15,255,1) 0%,rgba(40,47,255,1) 8%,rgba(81,87,255,1) 17%,rgba(117,124,255,1) 27%,rgba(168,174,255,1) 39%,rgba(201,205,255,1) 47%,rgba(168,174,255,1) 56%,rgba(117,124,255,1) 68%,rgba(81,87,255,1) 79%,rgba(40,47,255,1) 90%,rgba(7,15,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(7,15,255,1) 0%,rgba(40,47,255,1) 8%,rgba(81,87,255,1) 17%,rgba(117,124,255,1) 27%,rgba(168,174,255,1) 39%,rgba(201,205,255,1) 47%,rgba(168,174,255,1) 56%,rgba(117,124,255,1) 68%,rgba(81,87,255,1) 79%,rgba(40,47,255,1) 90%,rgba(7,15,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#070fff', endColorstr='#070fff',GradientType=0 ); /* IE6-9 */
 
 }
 #app {
