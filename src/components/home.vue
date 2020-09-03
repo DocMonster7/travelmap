@@ -175,7 +175,7 @@ export default {
           "Source and Destination arent proper Please select Correctly";
       } else {
         this.msg = Object.keys(this.all_buses).length;
-        console.log(this.msg);
+       // console.log(this.msg);
         for (let i = 0; i < Object.keys(this.all_buses).length; i++) {
           firebase
             .database()
@@ -203,7 +203,7 @@ export default {
               let a = this.getstop(snap.val().stops, this.all_buses[0][i], 1);
               if (a == 1) {
                 //("can go")
-                console.log("first");
+               // console.log("first");
                 this.submit_entries = true;
                 //  this.flag=1
                 return;
@@ -211,7 +211,7 @@ export default {
                 console.log("second");
                 a = this.getstop(snap.val().stops_1, this.all_buses[0][i], 2);
                 if (a == 1) {
-                  console.log("reverse");
+                //  console.log("reverse");
                   this.submit_entries = true;
                   //  this.flag=1
                   //("yeah can go reverse")}
