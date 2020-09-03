@@ -90,7 +90,6 @@ import { StyleBox } from "vuelayers";
 import { IconStyle } from "vuelayers";
 import { VueAutosuggest } from "vue-autosuggest";
 import firebase from "../firebaseconfig";
-
 Vue.use(VueLayers);
 Vue.use(StrokeStyle);
 Vue.use(StyleBox);
@@ -152,7 +151,6 @@ export default {
         }
       ];
     },
-
     filteredOptions1() {
       return [
         {
@@ -193,13 +191,11 @@ export default {
               //(Object.keys(snap.val()).length)
               this.l2 = Object.keys(snap.val()).length;
             });
-
           firebase
             .database()
             .ref("/routes/bus_route/" + this.all_buses[0][i])
             .once("value", snap => {
               //  //(snap.val().stops)
-
               let a = this.getstop(snap.val().stops, this.all_buses[0][i], 1);
               if (a == 1) {
                 //("can go")
@@ -240,7 +236,6 @@ export default {
           break;
         }
       }
-
       if (i < j) {
         if (sel == 1)
           firebase
@@ -273,7 +268,6 @@ export default {
     },
     put_data() {
       let i = 0;
-
       for (let j = 0; j < 9; j++) {
         this.suggestions[0].data.push({
           id: ++i,
@@ -281,7 +275,6 @@ export default {
         });
       }
       i = 0;
-
       for (let j = 0; j < 9; j++) {
         this.suggestions1[0].data.push({
           id: ++i,
@@ -340,7 +333,6 @@ export default {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
 input {
   width: 260px;
   padding: 0.5rem;
@@ -350,7 +342,6 @@ input {
   width: 200px;
   height: 150px;
 }
-
 ul {
   width: 100%;
   color: rgb(246, 247, 248);
@@ -368,13 +359,11 @@ li {
 li:hover {
   cursor: pointer;
 }
-
 .autosuggest-container {
   display: flex;
   justify-content: center;
   width: 280px;
 }
-
 #autosuggest {
   width: 100%;
   display: block;
