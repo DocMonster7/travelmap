@@ -3,8 +3,7 @@
     <navi/>
     <div class="container">
     <router-view/>
-    </div>
-    
+    </div>    
    </div>
 </template>
 
@@ -37,7 +36,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#070fff', end
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #000000;
   margin-top: 0px;
   
 }
