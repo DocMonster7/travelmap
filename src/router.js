@@ -4,7 +4,7 @@ import Home from './components/home.vue'
 import Profile from './components/menu.vue'
 import Search from './components/search.vue'
 import Login from './components/login.vue'
-import About from './components/about.vue'
+import Aboutus from './components/aboutus.vue'
 vue.use(router)
 let route =
     new router({
@@ -18,7 +18,7 @@ let route =
                 component: Login
             },
             {
-                path: '/profile',
+                path: '/menu',
                 component: Profile
             },
             {
@@ -26,10 +26,9 @@ let route =
                 component: Search
             },
             {
-                path: '/about',
-                component: About
+                path: '/aboutus',
+                component: Aboutus
             }
-
 
         ]
     })
